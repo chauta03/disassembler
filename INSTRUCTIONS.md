@@ -11,9 +11,11 @@ It also uses the other header files and utility functions that were
 provided to you for that project, such as `same.h`, `printFuncs.h`,
 `processArguments` (`.c` and `.h`), `printDebug.c`, and `printError.c`, etc.
 
-Thus, the first thing to do for this project is to copy (and commit) the
-contents of your DisUtils project into this repository, and make any
-changes suggested in the feedback to that project.
+Thus, the first thing to do for this project is to copy contents of your
+DisUtils project into this repository, add and commit them in git, and
+push that to this repository as a starting point.  (Make sure to first fix
+any errors or make other changes that were suggested in the grading
+feedback to DisUtils.)
 
 Once you start working on the Disassembler project itself, note that the
 Makefile provided to you for the DisUtil project included rules for
