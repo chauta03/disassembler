@@ -21,7 +21,14 @@ Once you start working on the Disassembler project itself, note that the
 Makefile provided to you for the DisUtil project included rules for
 compiling the Disassembler also.  You will want to change the definition of
 the `all` target to include both disUtil and disassembler (as suggested in
-the comments).
+the comments).  Alternatively, you could change it to just specify
+disassembler.
+
+The test driver function you used to test the utility functions makes a
+good template for a skeleton main function for the Disassembler project, so
+you may want to copy `disUtilDriver.c`, calling it something like
+`disassembler.c`, and then edit it to start implementing your Disassembler
+project.
 
 Following agile development principles, repeatedly Edit, Test, and Add/Commit
 until the program is done. You can `git push` to Kit as often as you want.
