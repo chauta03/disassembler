@@ -8,7 +8,7 @@ however, assume that you are using a Git repository to get started, so this
 document fills in details related to using a Git repository associated with
 Kit.
 
-## Getting the Right Files
+### Getting the Right Files
 
 The Disassembler project builds upon the Disassembler Utility functions you
 have already written: `verifyMIPSInstruction` and `binToDec`.
@@ -31,7 +31,7 @@ At this point, this repository should essentially
 be a working copy of your DisUtil repository, with a new README.md file
 and two sample test files.
 
-## Updating the Makefile
+### Updating the Makefile
 
 Once you start working on the Disassembler project itself, note that the
 Makefile provided to you for the DisUtil project included rules for
@@ -49,7 +49,7 @@ Disassembler project.  (Remember to change the comments at the top of the
 file to reflect the different purpose, input, and output of the
 disassembler.)
 
-## Getting Started with the Actual Project
+### Getting Started with the Actual Project
 
 A good second step, as described in the 
 [Disassembler PP
@@ -57,7 +57,7 @@ assignment](www.cs.kzoo.edu/cs230/Projects/DisassemblerProj.html), is to
 complete the `getRegName` function in `getRegName.c` and test it by adding
 code to your `main` function or to `testBinToDec`.
 
-## Test and Commit/Push Early and Often
+### Test and Commit/Push Early and Often
 
 The only new files provided here are a small sample test file and its
 associated expected output.  The sample "machine code" test file is titled
@@ -73,7 +73,7 @@ Kit](http://www.cs.kzoo.edu/CSShared/HelpFiles/Kit/RepositoryAssignments.md)
 document for more information about writing a program within a Git
 repository.)
 
-## Before Final Submission
+### Before Final Submission
 
 Don't forget to provide a `README.md` file with external documentation about
 your program, as described in the 
