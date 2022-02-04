@@ -1,0 +1,94 @@
+Line 1: 12345678901234567890123456789012
+        Length: 32
+Error: line 1 have invalid digits.
+
+Line 2: 01010101010101010101010101010101
+        Length: 32
+        Verified to be valid MIPS instruction.
+        bits 6..10: 01010 = 10 (decimal)
+        bits 0..5: 010101 = 21 (decimal1)
+        bits 3..27: 1010101010101010101010101 = 22369621 (decimal2)
+        bits 15..31: 10101010101010101 = 87381 (decimal3)
+        bits 1..1: 1 = 1 (decimal4)
+        bits 0..30: 0101010101010101010101010101010 = 715827882 (decimalT1)
+        bits 0..31: 01010101010101010101010101010101 = 1431655765 (decimalT2)
+
+Line 3: 11110000111100010101010111100011
+        Length: 32
+        Verified to be valid MIPS instruction.
+        bits 6..10: 00111 = 7 (decimal)
+        bits 0..5: 111100 = 60 (decimal1)
+        bits 3..27: 1000011110001010101011110 = 17765726 (decimal2)
+        bits 15..31: 10101010111100011 = 87523 (decimal3)
+        bits 1..1: 1 = 1 (decimal4)
+        bits 0..30: 1111000011110001010101011110001 = 2021174001 (decimalT1)
+        bits 0..31: 11110000111100010101010111100011 = 4042348003 (decimalT2)
+
+Line 4: 10101011111100011111001010101010
+        Length: 32
+        Verified to be valid MIPS instruction.
+        bits 6..10: 11111 = 31 (decimal)
+        bits 0..5: 101010 = 42 (decimal1)
+        bits 3..27: 0101111110001111100101010 = 12525354 (decimal2)
+        bits 15..31: 11111001010101010 = 127658 (decimal3)
+        bits 1..1: 0 = 0 (decimal4)
+        bits 0..30: 1010101111110001111100101010101 = 1442380117 (decimalT1)
+        bits 0..31: 10101011111100011111001010101010 = 2884760234 (decimalT2)
+
+Line 5: a1010101111110000101010101010111
+        Length: 32
+Error: line 5 have invalid digits.
+
+Line 6: 0101010111010101000101010100101b
+        Length: 32
+Error: line 6 have invalid digits.
+
+Line 7: 
+        Length: 0
+Error: line 7 does not have 32 chars.
+
+Line 8: 0000111111101010101001010101100
+        Length: 31
+Error: line 8 does not have 32 chars.
+
+Line 9: 11b11111111111111111111111111111
+        Length: 32
+Error: line 9 have invalid digits.
+
+Line 10: 11111111111111111111111111111111111
+        Length: 35
+Error: line 10 does not have 32 chars.
+
+Line 11: 1
+        Length: 1
+Error: line 11 does not have 32 chars.
+
+Line 12: a
+        Length: 1
+Error: line 12 does not have 32 chars.
+
+Line 13: 1asdjhfkljhqkwejhfjkhasdfjkhakss
+        Length: 32
+Error: line 13 have invalid digits.
+
+Line 14: 11111111111111111111111111111111
+        Length: 32
+        Verified to be valid MIPS instruction.
+        bits 6..10: 11111 = 31 (decimal)
+        bits 0..5: 111111 = 63 (decimal1)
+        bits 3..27: 1111111111111111111111111 = 33554431 (decimal2)
+        bits 15..31: 11111111111111111 = 131071 (decimal3)
+        bits 1..1: 1 = 1 (decimal4)
+        bits 0..30: 1111111111111111111111111111111 = 2147483647 (decimalT1)
+        bits 0..31: 11111111111111111111111111111111 = 4294967295 (decimalT2)
+
+Line 15: 10101010101010101010101010101010
+        Length: 32
+        Verified to be valid MIPS instruction.
+        bits 6..10: 10101 = 21 (decimal)
+        bits 0..5: 101010 = 42 (decimal1)
+        bits 3..27: 0101010101010101010101010 = 11184810 (decimal2)
+        bits 15..31: 01010101010101010 = 43690 (decimal3)
+        bits 1..1: 0 = 0 (decimal4)
+        bits 0..30: 1010101010101010101010101010101 = 1431655765 (decimalT1)
+        bits 0..31: 10101010101010101010101010101010 = 2863311530 (decimalT2)
