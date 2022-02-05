@@ -145,19 +145,24 @@ void processR(char buffer[], int lineNum)
     {
         instrName = "sll";
         printf("%s %s, %s, %d", instrName,
-                getRegName(reg1), getRegName(reg2), shamt);
+                getRegName(reg1), getRegName(reg3), shamt);
     }
     else if ( opcode == 2 ) /* srl */
     {
         instrName = "srl";
         printf("%s %s, %s, %d", instrName,
-                getRegName(reg1), getRegName(reg2), shamt);
+                getRegName(reg1), getRegName(reg3), shamt);
+    }
+    else if ( opcode == 8 ) /* jr */
+    {
+        instrName = "jr";
+        printf("%s %s\n", instrName, getRegName(reg2));
     }
     else
     {
         char type;
         type = 'R';
-        
+
         instrName = getInstrName(opcode, type);
 
         char * compare;
