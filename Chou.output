@@ -24,3 +24,7 @@ L3: slti $s2, $t0, 100
 L4: jr $ra
     j L1
     jal L1
+Wrong:  func = 1    (type R)
+        opcode = 7  (type I)
+        opcode = 1
+        opcode = 14

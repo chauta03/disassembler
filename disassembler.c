@@ -34,15 +34,14 @@
  *      message to stderr saying so.  (The program also prints an error
  *      message if it cannot open the file.)
  *
- * Author:  Your_Name(s)
- *        with assistance from:
- *        working side-by-side with:
+ * Author:  Chau Ta
  *
  * Creation Date:  1 February, 2022
  *        modified: 1 Feb, 2022 -- implement initial versions of processR
  *                                  and processJ, and a placeholder for
  *                                  processI
- *        modified: Modification_Date        reason
+ *        modified: 6 Feb, 2022 -- implement the full versions of processR
+ *                                  and processJ, and processI
  *
  */
 
@@ -165,12 +164,9 @@ void processR(char buffer[], int lineNum)
 
         instrName = getInstrName(opcode, type);
 
-        char * compare;
-        compare = "invalid";
-        
-        if ( instrName == NULL || strcmp( instrName, compare) == 0 )
+        if ( instrName == NULL || strcmp( instrName, "invalid" ) == 0 )
             printError("Error on line %d: Invalid funct code %d\n", lineNum, opcode);
-
+        
         printf("%s %s, %s, %s", instrName,
                 getRegName(reg1), getRegName(reg2), getRegName(reg3) );
     
@@ -257,14 +253,8 @@ void processI(char buffer[], int opcode, int lineNum)
         char * instrName ;
         instrName = getInstrName(opcode, type);
 
-        char * compare;
-        compare = "invalid";
-        
-        if ( instrName == NULL || strcmp( instrName, compare) == 0 )
-        {
+        if ( instrName == NULL || strcmp( instrName, "invalid") == 0 )
             printError("Line %d: Invalid opcode %d\n", lineNum, opcode);
-            instrName = "invalid";
-        }
         
         sourceReg = binToDec(buffer, 6, 10);
         destReg = binToDec(buffer, 11, 15);
@@ -286,6 +276,9 @@ char * getInstrName(int opcode, char type)
     if ( type == 'I' )
     {
         opcode -= 8; /* Because "regular" I format start from 8 to 13 */
+        if ( opcode < 0 || opcode > 5 )
+            return "invalid";
+
         static char * instrArrayI[] =
         {
                 "addi","addiu",
@@ -295,9 +288,12 @@ char * getInstrName(int opcode, char type)
  
         return instrArrayI[opcode];
     }
-    else if ( type == 'R' ) /* if type is R */
+    else /* if type is R */
     {
         opcode -= 32; /* Because R instructions start from 32 to 43 without 38, 40 and 41 */
+        if ( opcode < 0 || opcode > 11)
+            return "invalid";
+
         static char * instrArrayR[] =
         {
             "add", "addu", "sub", "subu",
@@ -305,8 +301,8 @@ char * getInstrName(int opcode, char type)
             "invalid", "invalid",        /* Because R instructions do not include 40 and 41 */
             "slt", "sltu"
         };
+ 
         return instrArrayR[opcode];
     }
-    else    /* other invalid cases */
-        return "invalid";
 }
+

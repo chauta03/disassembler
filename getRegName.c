@@ -28,7 +28,7 @@
  *
  * Author: Alyce Brady and Garrett Olson
  * Date:   2/10/99
- *
+ * 
  */
 
 char * getRegName (int regNbr)
@@ -37,6 +37,7 @@ char * getRegName (int regNbr)
         /* Create a static (persistent) array of the mnemonic names,
          *    each of which is a string (char *).
          */
+        
         static char * regArray[] =
         {
                 "$zero",
@@ -49,6 +50,6 @@ char * getRegName (int regNbr)
                 "$k0","$k1",
                 "$gp","$sp","$fp","$ra",
         };
- 
+
         return regArray[regNbr];
 }
