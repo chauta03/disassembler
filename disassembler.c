@@ -164,6 +164,7 @@ void processR(char buffer[], int lineNum)
 
         instrName = getInstrName(opcode, type);
 
+        /* If funct cod is not valid -> print Error */
         if ( instrName == NULL || strcmp( instrName, "invalid" ) == 0 )
             printError("Error on line %d: Invalid funct code %d\n", lineNum, opcode);
         
